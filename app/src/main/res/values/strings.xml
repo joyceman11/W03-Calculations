@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">W03-Calculations</string>
     <string name="equals">equals</string>
+    <string name="answer"></string>
+    <string name="number1"></string>
+    <string name="number2"></string>
+    <string name="plus">plus</string>
+    <string name="hint">number</string>
+
 </resources>

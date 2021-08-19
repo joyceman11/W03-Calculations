@@ -18,8 +18,19 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
+            android:hint="@string/hint"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:text="@string/number1"
             android:textSize="30sp" />
 
+
+        <TextView
+            android:id="@+id/plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="@string/plus" />
 
         <EditText
             android:id="@+id/number2"
@@ -27,6 +38,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
+            android:hint="@string/hint"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:text="@string/number2"
             android:textSize="30sp" />
 
     </LinearLayout>
