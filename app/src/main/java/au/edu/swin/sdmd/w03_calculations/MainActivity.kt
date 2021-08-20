@@ -25,5 +25,4 @@ class MainActivity : AppCompatActivity() {
     }
     // adds two numbers together
     private fun add(number1: String, number2: String) = number1.toInt() + number2.toInt()
-
 }
