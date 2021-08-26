@@ -36,6 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="36dp"
                 android:checked="false"
+                android:onClick="onRadioButtonClicked"
                 android:text="@string/plus" />
 
             <RadioButton
@@ -46,6 +47,7 @@
                 android:checked="false"
                 android:clickable="false"
                 android:minHeight="48dp"
+                android:onClick="onRadioButtonClicked"
                 android:text="@string/multiply" />
         </RadioGroup>
 
