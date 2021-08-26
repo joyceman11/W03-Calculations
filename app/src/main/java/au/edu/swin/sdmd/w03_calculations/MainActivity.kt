@@ -2,6 +2,7 @@ package au.edu.swin.sdmd.w03_calculations
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -9,15 +10,48 @@ import android.widget.RadioButton
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
+    var operatorResult: Int = 0
     var operator = "plus"
+
+    //lifecycles
+    override fun onStart() {
+        super.onStart()
+        Log.i("LIFECYCLE", "onStart")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.i("LIFECYCLE", "onResume")
+    }
+
+    override fun onPause(){
+        super.onPause()
+        Log.i("LIFECYCLE", "onPause")
+    }
+
+    override fun onStop(){
+        super.onStop()
+        Log.i("LIFECYCLE", "onStop")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.i("LIFECYCLE", "onDestroy")
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        Log.i("LIFECYCLE", "onCreate")
 
         val number1 = findViewById<EditText>(R.id.number1)
         val number2 = findViewById<EditText>(R.id.number2)
         val answer = findViewById<TextView>(R.id.answer)
 
+        //saveInstanceState, used for the result to be kept on the screen
+        savedInstanceState?.let {
+            operatorResult = savedInstanceState.getInt("answer")
+            answer.setText(operatorResult.toString())
+        }
         val equals = findViewById<Button>(R.id.equals)
         equals.setOnClickListener {
             val result = when(operator) {
@@ -53,6 +87,14 @@ class MainActivity : AppCompatActivity() {
                     }
             }
         }
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putInt("answer", operatorResult)
+        Log.i("LIFECYCLE", "$operatorResult")
+
+
     }
 
 }
