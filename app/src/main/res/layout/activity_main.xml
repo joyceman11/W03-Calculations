@@ -25,12 +25,29 @@
             android:textSize="30sp" />
 
 
-        <TextView
-            android:id="@+id/plus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0"
-            android:text="@string/plus" />
+        <RadioGroup
+            android:id="@+id/radioOp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <RadioButton
+                android:id="@+id/radioPlus"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:checked="false"
+                android:text="@string/plus" />
+
+            <RadioButton
+                android:id="@+id/radioMult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="false"
+                android:clickable="false"
+                android:minHeight="48dp"
+                android:text="@string/multiply" />
+        </RadioGroup>
 
         <EditText
             android:id="@+id/number2"

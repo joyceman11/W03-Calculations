@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">W03-Calculations</string>
+    <string name ="plus">tambah</string>
+    <string name ="equals">sama dengan</string>
+    <string name= "number1"></string>
+    <string name= "number2"></string>
+    <string name = "answer">menghitung</string>
+    <string name ="hint">nomor</string>
+    <string name ="multiply">perkalian</string>
+</resources>
