@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
     var operatorResult: Int = 0
     var operator = "plus"
 
-    //lifecycles
+    //lifecycles for the activity
     override fun onStart() {
         super.onStart()
         Log.i("LIFECYCLE", "onStart")
